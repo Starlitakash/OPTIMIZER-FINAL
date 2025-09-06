@@ -1,0 +1,7 @@
+streamlit
+PyMuPDF
+requests
+groq
+python-dotenv
+reportlab
+streamlit-lottie
