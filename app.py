@@ -33,13 +33,21 @@ if 'improved_resume_markdown' not in st.session_state:
 if 'improved_resume_pdf_bytes' not in st.session_state:
     st.session_state['improved_resume_pdf_bytes'] = None
 
-load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+# 🔑 Handle secrets for both local and Streamlit Cloud
+api_key = None
+if "GROQ_API_KEY" in st.secrets:  # On Streamlit Cloud
+    api_key = st.secrets["GROQ_API_KEY"]
+else:  # Local development
+    load_dotenv()
+    api_key = os.getenv("GROQ_API_KEY")
+
 if not api_key:
-    st.error("GROQ_API_KEY not found in .env file. Please add it and restart the app.")
+    st.error("❌ GROQ_API_KEY not found. Please add it to Streamlit Secrets or a .env file.")
     st.stop()
+
 client = Groq(api_key=api_key)
 
+# Styles for PDF rendering
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(name='NameStyle', fontName='Helvetica-Bold', fontSize=18, leading=22, alignment=TA_CENTER, spaceAfter=4))
 styles.add(ParagraphStyle(name='ContactStyle', fontName='Helvetica', fontSize=10, leading=12, alignment=TA_CENTER, spaceAfter=12))
@@ -175,6 +183,7 @@ def create_pdf_from_markdown(tagged_text):
     buffer.seek(0)
     return buffer.getvalue()
 
+# ================== Streamlit UI ==================
 st.title("🚀 Optimizr")
 st.subheader("Your Career, Optimized.", anchor=False)
 
