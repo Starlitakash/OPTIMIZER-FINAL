@@ -1,4 +1,4 @@
-# Resume Reviewer — OPTIMIZER-RESUME
+OPTIMIZR
 
 An AI-powered tool that reviews resumes for ATS (Applicant Tracking System) compatibility, provides improvement suggestions, and generates a professional score report.
 
