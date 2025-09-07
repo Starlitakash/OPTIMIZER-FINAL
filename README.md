@@ -8,7 +8,7 @@ An AI-powered tool that reviews resumes for ATS (Applicant Tracking System) comp
 [Watch Demo](<https://drive.google.com/file/d/1RtmG71CqEXetPqFTDbJpnGCIVR-Nq2Jv/view?usp=drivesdk>)
 
 ## 📊 Presentation
-[View Presentation](<PASTE GOOGLE DRIVE PRESENTATION LINK HERE>)
+[View Presentation](<https://drive.google.com/file/d/1mQXxbfMj-kgliFHpuY3jwR7CLXspVZXW/view?usp=drivesdk>)
 
 ---
 
