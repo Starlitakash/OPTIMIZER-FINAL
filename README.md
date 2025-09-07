@@ -38,8 +38,8 @@ You can try the app directly here: [Resume Reviewer on Streamlit](https://optimi
 
 ## 👨‍💻 Contributors
 
-Akash Singh (Team Lead)
-Aksh Garg
+Akash Singh (Team Lead),
+Aksh Garg,
 Yashasvi
 
 ## 📜 License
